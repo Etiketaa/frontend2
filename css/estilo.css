@@ -48,7 +48,7 @@ ul {
   border-radius: 10px;
   padding: 0px;
   margin: 15px;
-  height: 30vh;
+  height: auto;
   width: 50vw;
 }
 
@@ -135,6 +135,8 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 200px;
+  height: auto;
 }
 
 .barra-footer,
@@ -142,11 +144,12 @@ footer {
   background-color: lightcoral;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-content: center;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
+  height: auto;
 }
 
 
@@ -171,6 +174,29 @@ footer {
   width: 30vw;
 }
 
+.redes,
+.barrio,
+.texto {
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+
+  /* ajusta este valor según tus necesidades */
+  .barra-footer,
+  footer {
+    flex-direction: column;
+  }
+
+  .redes,
+  .barrio,
+  .texto {
+    width: 100%;
+
+    max-width: none;
+  }
+}
+
 main {
   display: flex;
   justify-content: space-around;
@@ -178,4 +204,50 @@ main {
   align-items: baseline;
   flex-wrap: nowrap;
   align-content: stretch;
+}
+
+.form-container {
+  width: 80vw;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+textarea {
+  padding: 0.5em;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+  font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
 }
