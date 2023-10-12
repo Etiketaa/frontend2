@@ -135,7 +135,8 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: ;
+  width: 200px;
+  height: auto;
 }
 
 .barra-footer,
@@ -191,7 +192,7 @@ footer {
   .barrio,
   .texto {
     width: 100%;
-    /* toma todo el ancho disponible */
+
     max-width: none;
   }
 }
