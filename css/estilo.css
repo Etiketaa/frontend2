@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;1,6..12,200&display=swap');
 
+body {
+  background: white url(../Imagenes/diademuertos.jpg) center center fixed;
+  background-repeat: no-repeat;
+  overflow: auto;
+  background-size: cover;
+}
+
 h1 {
   font-size: 55px;
 }
 
 h2 {
-  font-size: 38px;
-}
-
-h3 {
   font-size: 38px;
 }
 
@@ -36,11 +39,14 @@ ul {
   text-shadow: 2px 2px 4px white;
 }
 
-.fondo {
-  background: white url(../Imagenes/diademuertos.jpg) center center fixed;
-  background-repeat: no-repeat;
-  overflow: auto;
-  background-size: cover;
+
+
+.content-carne {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-direction: row;
 }
 
 .imagenes {
@@ -49,7 +55,21 @@ ul {
   padding: 0px;
   margin: 15px;
   height: auto;
-  width: 50vw;
+  width: auto;
+  max-height: 30vh;
+  max-width: 50vw;
+}
+
+.centro {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.texto-centro {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cent-imagenes {
@@ -59,7 +79,6 @@ ul {
   flex-direction: column;
   align-content: center;
 }
-
 
 .button {
   font-family: Georgia;
@@ -130,13 +149,14 @@ footer {
   margin: 10%;
 }
 
-.videos-iframe {
+iframe {
+  width: 512px;
+  height: 292px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
-  height: auto;
+  flex-wrap: wrap;
 }
 
 .barra-footer,
@@ -144,12 +164,11 @@ footer {
   background-color: lightcoral;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-content: center;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  height: auto;
 }
 
 
@@ -165,36 +184,14 @@ footer {
 }
 
 .barrio {
-  width: 30vw;
+  width: 20vw;
+  height: auto;
 }
 
 .texto {
   flex: 1;
   padding: 10px;
   width: 30vw;
-}
-
-.redes,
-.barrio,
-.texto {
-  min-width: 200px;
-}
-
-@media (max-width: 768px) {
-
-  /* ajusta este valor según tus necesidades */
-  .barra-footer,
-  footer {
-    flex-direction: column;
-  }
-
-  .redes,
-  .barrio,
-  .texto {
-    width: 100%;
-
-    max-width: none;
-  }
 }
 
 main {
@@ -209,45 +206,16 @@ main {
 .form-container {
   width: 80vw;
   max-width: 500px;
-  background-color: #ffffff;
   padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: lightgrey;
+  font-family: 'Nunito Sans', sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 0.5em;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="email"],
-textarea {
-  padding: 0.5em;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  padding: 0.5em 1em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  align-self: center;
-  font-size: 1rem;
-}
-
-input[type="submit"]:hover {
-  background-color: #555;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  border-radius: 5px;
 }
